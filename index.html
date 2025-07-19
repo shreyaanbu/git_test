@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!--iconscout cdn-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <title>Vraj Kesar Farm</title>
+   
+</head>
+
+<body>
+     <nav class = "navbar">
+        <div class = "flex-container">
+            <a href = "index.html">
+                <img src="Images/logo.png" alt="company logo" height="70">
+            </a>
+            <ul class = "nav-links">
+                <li class = "link-button"><a href = "order.html">Order Now</a></li>
+                <li class = "link-button"><a href = "#about">About Us</a></li>
+                <li class = "link-button"><a href = "#contact">Contact Us</a></li>
+                <li class = "link-button">
+                    <a href = "cart.html"><i class="uis uis-shopping-cart-alt"></i>
+                        Cart
+                    </a></li>
+                <li class = "link-button"><a href = "register.html">Register/Sign In</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <div class = "information" id="introduction">
+        <h1 class="fade-in-on-scroll">Vraj Kesar Farm</h1>
+        <br>
+        <p class="fade-in-on-scroll">Naturally sweet, and bursting with flavor—our organic Kesar mangoes are a golden delight in bite! 🥭✨
+        </p>
+        <br>
+        <br>
+        <a href = "order.html" class="button">Order Now</a>
+    </div>
+
+    <div class="information">
+        <h1 class="fade-in-on-scroll">When you buy our mangoes, you help us in supporting:</h1>
+        <br>
+        <br>
+        <div class="flex-container">
+            <img src="Images/mango4-cropped.jpg" alt="mangoes" width = 50% class="photo">
+            <ul class="feature-list">
+                <li>Good Health</li>
+                <li>Happy Soil</li>
+                <li>The Making of Nutrition-Packed Fruits</li>
+                <li>The Health of Our Mango Trees</li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <div id="about" class="information">
+        <h1 class="fade-in-on-scroll">About Us</h1>
+        <br>
+        <p class="fade-in-on-scroll">We started in the year _year_, in _location_. Our main motivation was to produce the best quality of Kesar mangoes, keeping in mind the health of the consumer as well as that of the environment. Organic farming has paved the way for that, and so far every year, we produce _quantity_ of mangoes. There are _number of_ healthy mango trees, solely nurtured through the ways of organic farming, whose nutritious bounty we reap annually.</p>
+        <br>
+        <p class="fade-in-on-scroll">Here are some photographs from our nurtured farm: </p>
+        <br>
+        <br>
+        <div class="flex-container" class="fade-in-on-scroll">
+            <div class="flex-container">
+                <div class="gallery-item landscape"><img src="Images/mango5.jpg" alt="Landscape 1"></div>
+                <div class="gallery-item portrait"><img src="Images/mango1.jpg" alt="Portrait 1"></div>
+            </div>
+             
+            <div class="flex-container">
+                <div class="gallery-item portrait"><img src="Images/mango3.jpg" alt="Portrait 2"></div>
+                <div class="gallery-item landscape"><img src="Images/mango2.jpg" alt="Landscape 2"></div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id = "contact" class="flex-container">
+        <div>
+            <h2>Contact Us</h2>
+            <br>
+            <p>Address: </p>
+            <p>Email: </p>
+            <p>Phone Number: </p>
+        </div>
+        
+        <div>
+            <h2>Social Media:</h2>
+            <br>
+            <p>
+                <a>Instagram</a>
+            </p>
+            <p>
+                <a>Facebook</a>
+            </p>
+            
+        </div>
+        
+    </div>
+
+    <script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+        });
+    });
+
+    document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
+        observer.observe(el);
+    });
+
+    document.querySelectorAll('.feature-list li').forEach(el => {
+        observer.observe(el);
+    });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-yellow: #f1be0c;
+  --color-white: #ffffff;
+  --color-green: #066a39;
+  --color-black: #0E1428;
+  --color-brown: rgb(62, 56, 56);
+  --transition: all 400ms ease;
+  --color-light-yellow:  rgb(232, 207, 45);
+}
+
+body {
+  background: var(--color-yellow);
+  height: 100vh;
+  max-width: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 1.9rem;
+  color: var(--color-black);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  align-items: center; 
+  flex-direction: row;
+}
+
+.navbar .flex-container{
+  font-size: 1.5rem;
+  background-color: white;
+  padding: 1.5rem;
+  justify-content: space-between;
+}
+
+.navbar img{
+  height: 3.5rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+a {
+  color: inherit;   
+  text-decoration: none; 
+}
+
+a:hover {
+  color: var(--color-green); 
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.information {
+  padding: 7rem 5rem 5rem 5rem;
+  align-content: center;
+  text-align: center;
+  color: var(--color-brown);
+}
+
+#introduction, #about {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  font-weight:mediumbold;
+  color:var(--color-white);
+}
+
+.information h1{
+  font-size: 4rem;
+  background: linear-gradient(90deg,  var(--color-black), var(--color-brown), var(--color-black));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+#about p{
+  text-align: justify;
+}
+
+#introduction h1, #about h1 {
+  font-size: 4rem;
+  background: linear-gradient(90deg, var(--color-yellow), var(--color-light-yellow), var(--color-yellow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.button {
+  background-color: var(--color-black);
+  padding: 1rem;
+  border-radius: 0.4rem;
+  font-weight: bold;
+  font-size:1.2rem;
+  color:#ffffff;
+
+}
+
+.button:hover{
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+  transition: var(--transition);
+}
+
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.feature-list li {
+  display: flex;                 /* Make it a flex container */
+  justify-content: center;      /* Center horizontally */
+  align-items: center;          /* Center vertically */
+  text-align: center;           /* Optional: center text itself */
+  
+  font-size: 2.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  min-width: 35vw;
+  max-width: 35vw;
+  min-height: 180px;
+  background: linear-gradient(0deg, var(--color-light-yellow), rgb(244, 238, 128));
+  color: var(--color-brown);
+  font-weight: 600;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: default;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.feature-list li.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature-list li:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.photo {
+  border-radius: 1rem;
+  max-width: 45vw;
+}
+
+
+.flex-container .gallery-item img {
+  border-radius: 1rem;
+  margin: 1rem;
+  width: 40vw;
+}
+
+.flex-container .gallery-item.portrait img {
+  border-radius: 1rem;
+  margin: 1rem;
+  height: 40vw;
+  width: auto;
+} 
+
+#contact {
+  justify-content: flex-start;
+  padding: 3rem 3rem 7rem 3rem;
+  gap: 10rem; 
+  align-items: flex-start;
+}
+
+#about p{
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature-list li {
+    min-height: 100px;
+    min-width: 70vw;
+    font-size: 2.5rem;
+  }
+
+  .photo {
+    border-radius: 1rem;
+    width: 80vw;
+  }
+  
+  .flex-container .gallery-item.portrait img{
+    border-radius: 1rem;
+    margin: 1rem;
+    width: 65vw;
+    height: auto;
+  }
+
+  .flex-container .gallery-item.landscape img{
+    border-radius: 1rem;
+    margin: 1rem;
+    width: 65vw;
+    height: auto;
+  }
+
+} 
