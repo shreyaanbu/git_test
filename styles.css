@@ -92,8 +92,12 @@ a:hover {
   text-align: justify;
 }
 
-#introduction h1, #about h1 {
+h1 {
   font-size: 4rem;
+}
+
+#introduction h1, #about h1 {
+  
   background: linear-gradient(90deg, var(--color-yellow), var(--color-light-yellow), var(--color-yellow));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -204,18 +208,71 @@ a:hover {
   font-style: italic;
 }
 
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
-  .flex-container {
-    flex-direction: column;
-    align-items: center;
+
+  p{
+    font-size: 1rem;
+    padding: 0rem 1rem;
   }
-  .feature-list li {
-    min-height: 100px;
-    min-width: 70vw;
+
+  h2{
+    font-size: 1.5rem;
+  }
+
+  li{
+    font-size: 1rem;
+    padding: 0.5rem 0rem;
+  }
+
+  .information{
+    padding: 2rem 1rem 3rem 1rem;
+  }
+
+  .information h1{
     font-size: 2.5rem;
   }
 
-  .photo {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links li{
+    padding: 0rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+  .navbar img {
+    height: 4rem;
+  }
+
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .feature-list li {
+    min-height: 100px;
+    min-width: 70vw;
+    font-size: 1.5rem;
+  }
+
+  #mangoes.photo {
     border-radius: 1rem;
     width: 80vw;
   }

@@ -3,6 +3,7 @@
 
 <head>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
 
     <!--iconscout cdn-->
@@ -23,7 +24,8 @@
             <a href = "index.html">
                 <img src="Images/logo.png" alt="company logo" height="70">
             </a>
-            <ul class = "nav-links">
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul class = "nav-links" id="navMenu">
                 <li class = "link-button"><a href = "order.html">Order Now</a></li>
                 <li class = "link-button"><a href = "#about">About Us</a></li>
                 <li class = "link-button"><a href = "#contact">Contact Us</a></li>
@@ -52,7 +54,7 @@
         <br>
         <br>
         <div class="flex-container">
-            <img src="Images/mango4-cropped.jpg" alt="mangoes" width = 50% class="photo">
+            <img src="Images/mango4-cropped.jpg" alt="mangoes" class="photo" id="mangoes">
             <ul class="feature-list">
                 <li>Good Health</li>
                 <li>Happy Soil</li>
@@ -89,21 +91,20 @@
         <div>
             <h2>Contact Us</h2>
             <br>
-            <p>Address: </p>
-            <p>Email: </p>
-            <p>Phone Number: </p>
+            <ul>
+                <li>Address:</li>
+                <li>Email: </li>
+                <li>Phone Number: </li>
+            </ul>
         </div>
         
         <div>
             <h2>Social Media:</h2>
             <br>
-            <p>
-                <a>Instagram</a>
-            </p>
-            <p>
-                <a>Facebook</a>
-            </p>
-            
+            <ul>
+                <li><a href="https://www.instagram.com/vraj_farm_/" target="_blank">Instagram</a></li>
+                <li><a>Facebook</a></li>
+            </ul>            
         </div>
         
     </div>
@@ -124,6 +125,10 @@
     document.querySelectorAll('.feature-list li').forEach(el => {
         observer.observe(el);
     });
+
+    function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("show");
+    }
     </script>
 
 </body>
